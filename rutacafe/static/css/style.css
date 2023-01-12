@@ -1,0 +1,67 @@
+
+/* vamos a configurar la cabecera con un menu */
+.header{
+    width: 98%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+} 
+
+.header .menu {
+    margin: 40px 0;
+    text-align: right;
+    background: #fbf6f6;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.header .menu a{
+    margin: 0 20px;
+    color: #000;
+    padding-bottom: 9px;
+    font-size: 1em;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.header .menu a:hover{
+    border-bottom: 3px solid #23437E;
+}
+
+.header.menu i {
+    padding: 5px;
+}
+
+/* estilo de botones */ 
+
+.boton1{
+    background: #23437E;
+    box-sizing: border-box;
+    border-radius: 0.6rem;
+    align-self: center;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 15px;
+    padding:  5px 10px;
+    text-align: center;
+    color: aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+@-o-keyframes vibracion{
+    0%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.boton1:hover{
+    /* llamar a eventos keyframes */
+    animation: vibracion 100ms 
+}

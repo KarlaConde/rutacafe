@@ -1,0 +1,82 @@
+{% extends "comun/base.html" %}
+
+
+{% block content %}
+
+{% for emprendedor in emprendedores %}
+
+<section>
+  <!-- buscador -->
+  <!-- Categorias -->
+  <!-- Emprendimientos -->
+  
+  <h1 class="alert alert text-center" style="background-color: #DAA520;">-- E M P R E N D E D O R E S --</h1>
+  <div class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-black">
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body class="w3-content" style="max-width:1300px">
+
+<!-- First Grid: Logo & About -->
+<div class="w3-row">
+  <div class="w3-half w3 w3-container" style="height:600px">
+    <div class="w3-padding-64 w3-center" style="background-color: #EAF2F8;">
+      <h1>{{ emprendedor.first_name }}  {{ emprendedor.last_name }} </h1>
+      <img src="/media/{{ emprendedor.foto }}" class="w3-margin w3-circle" alt="Person" style="width:40%">
+      <div class="w3-left-align w3-padding-large">
+        <p>Empresaria, visionaria con el proósito de traer un poco de China a Vilcabamba</p>
+        <p>Logra radicarse tras varios años en el país y formar una familia con vision y compromiso</p>
+      </div>
+    </div>
+  </div>
+  <div class="w3-half w3 w3-container" style="min-height:600px">
+    <div class="w3-padding-64 w3-center" style="background-color: #EAF2F8;">
+      <h2>Información</h2>
+      <div class="w3-container w3-responsive">
+        <table class="w3-table">
+          <br>
+          <tr class="w3-white">
+            <td>1.</td>
+            <td>Cédula</td>
+            <td>{{emprendedor.cedula}}</td>
+          </tr>
+          <br>
+          <tr>
+            <td>2.</td>
+            <td>Correo</td>
+            <td>{{ emprendedor.email }}</td>
+          </tr>
+          <br>
+          <tr class="w3-white">
+            <td>3.</td>
+            <td>Fecha de nacimiento</td>
+            <td>{{emprendedor.fecha_nacimiento}}</td>
+          </tr>
+          <tr>
+            <td>4.</td>
+            <td>Celular</td>
+            <td>{{emprendedor.celular}}</td>
+          </tr>
+          <tr class="w3-white">
+            <td>5.</td>
+            <td>Direccion</td>
+            <td>{{emprendedor.direccion}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <br>
+    <a type="button" class="btn btn-warning btn-rounded" href="/administracion/emprendedores/listado">Regresar</a> 
+  </div>
+</div>
+</div>
+
+</body>
+</html>
+</section>
+{% endfor %}
+{% endblock %}

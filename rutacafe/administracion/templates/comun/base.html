@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--aqui va el enlace con el head-->
+{% include "comun/estilos.html" %}
+
+<body>
+    <!--crear todo el ambiente de trabajo para muestro proyecto-->
+    <!--colocamos bootstrap-->
+    
+    <div class="container">
+        {%include "comun/header.html"%}
+        <!--deja marcado el area de trabajo para la pagina web-->
+
+        {% block content %}
+        
+        
+        {% endblock  %}
+          <!--llamar al bloque de pie de página-->
+          <br>
+        {% include "comun/footer.html" %}
+    </div>
+
+</body>
+</html>

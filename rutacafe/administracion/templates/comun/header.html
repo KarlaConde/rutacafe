@@ -1,0 +1,88 @@
+<header>
+
+  <!-- llamamos el menu perzonalizado -->
+
+  <div class="header">
+    
+    <nav class="menu">
+      <a href="/"><i class="fa fa-home" aria-hidden="true"></i>Inicio</a>
+      <a href="/administracion/emprendimientos/listado">Emprendimientos</a>
+      <a href="/administracion/emprendedores/listado">Emprendedores</a>
+      <a href="/administracion/reserva">Reservas</a>
+      <a href="/administracion/contactanos">Contáctanos</a>
+      
+    </nav>
+  </div>
+    <!-- Intro settings -->
+    <style>
+      /* Default height for small devices */
+      #intro-example {
+        height: 400px;
+      }
+  
+      /* Height for devices larger than 992px */
+      @media (min-width: 992px) {
+        #intro-example {
+          height: 600px;
+        }
+      }
+    </style>
+  
+   {% comment %}  <nav class="navbar navbar-expand-lg" style="background-color: #23437E;">
+      <div class="container-fluid " >
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-5 mb-lg-2">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="/administracion/index">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/administracion/emprendimientos/listado">Emprendimientos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/administracion/emprendedores/listado">Emprendedores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/administracion/reserva">Reservas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="/administracion/contactanos">Contáctanos</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2 text-white" type="search" placeholder="Buscador" aria-label="Buscador">
+            <button class="btn btn-outline-success" type="submit">Buscador</button>
+          </form>
+        </div>
+      </div>
+    </nav> {% endcomment %}
+    <br>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://www.mibreit-photo.com/blog/wp-content/uploads/2016/11/Izhcayluma-View.jpg" class="d-block w-100" height="440" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://lp-cms-production.imgix.net/2019-06/3da88e15e0f4354a7555bc54a9e5130a-vilcabamba.jpg" class="d-block w-100" height="440" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="https://sanpedrovilcabamba.files.wordpress.com/2014/12/102_23241.jpg" class="d-block w-100" height="440" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </header>

@@ -1,0 +1,45 @@
+<!--aqui va el enlace con el head-->
+{% extends "comun/base.html" %}
+
+{% block content %}
+    
+<section>
+  <br>
+  <h1 style = "font-family:Lucida Bright;">Categorias de emprendimientos</h1>
+  <div class="row">
+    {% for categoria in categorias %}
+     <div class="card m-2" style="width: 16.7rem;">
+          <img src="/media/{{ categoria.foto }}"class="card-img-top" alt="...">
+         <div class="card-body">
+            <h4 class="card-title" style = "font-family:Lucida Bright;" align="center" >{{ categoria.categoria_emprendimiento }}</h5>
+            <center><a href="/administracion/emprendimientos/listado/{{categoria.id}}" class="btn btn" style="background-color: #DAA520;" >Ver más</a></center>
+         </div>
+       </div>
+       
+      {% endfor %}
+
+  </section>
+  <br>
+  <section >
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <div class="ratio ratio-16x9">
+            <iframe
+              src="https://www.youtube.com/embed/vlDzYIIOYmM"
+              title="YouTube video"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="col">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106079.57187841325!2d-79.260779200423!3d-4.2253580936411606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91cb25f5fa1494bd%3A0xfdfdb8d570cebfe7!2sSan%20Pedro%20de%20Vilcabamba!5e0!3m2!1sen!2sec!4v1669488807010!5m2!1sen!2sec" width="540" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div> 
+  
+  </section>
+
+  
+ {% endblock  %}
+    

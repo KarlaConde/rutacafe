@@ -1,0 +1,75 @@
+{% extends "comun/base.html" %}
+
+
+{% block content %}
+
+<section>
+    
+</section>
+
+<section>
+  <!-- buscador -->
+  <!-- Categorias -->
+  <!-- Emprendimientos -->
+  <h1 class="alert text-center" style="background-color: #DAA520;">E M P R E N D I M I E N T O S </h1>
+  <div class="row text-center m-4">
+    <!-- cargamos los elementos de la base de datos utilizando los snipets de django para template
+        es se conserva lla logica de python y se lo utiliza en la plantilla
+    -->
+    {% for emprende in empreder %}
+   
+      <div class="card m-3" style="width: 18rem;">
+        <img src="/media/{{ emprende.fotoemp }}" class="card-img-top" width="500" height="350" >
+        <div class="card-body">
+          <h5 class="card-title">{{ emprende.nombre_emprendimiento }} </h5>
+         
+          <a href="/administracion/emprendimientos/emprendimiento/{{ emprende.id }}" class="btn btn-outline-secondary" style="background-color: #DAA520;">Visitar Emprendimiento</a>
+        </div>
+      </div>
+  {% endfor  %}
+  
+  </div>
+
+  
+</section>
+
+<section>
+  
+</section>
+
+<section>
+  <!-- modales -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+    <!-- Destacados -->
+
+</section>
+<section>
+    <!-- mapa -->
+
+</section>
+
+{% endblock %}

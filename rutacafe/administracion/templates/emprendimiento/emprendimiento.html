@@ -1,0 +1,143 @@
+{% extends "comun/base.html" %}
+
+
+{% block content %}
+
+{% for emprende in emprendimiento %}
+
+  <!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-30"> 
+  <h1><b>{{ emprende.nombre_emprendimiento }}</b></h1>
+  <p>Bienvenidos a concocer más sobre mi <span class="w3-tag"></span></p>
+</header>
+<!-- Grid -->
+<div class="w3-row">
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-panel w3-card-4 w3" style="background-color: #FAFAEA ;">
+    <center><img src="/media/{{ emprende.fotoemp }}" alt="Nature"style="width:48%"></center>
+    <div class="w3-container">
+      <h5>{{ emprende.descripcion }} <span class="w3-opacity"></span></h5>
+    </div>
+
+    <div class="w3-container">
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><a type="button" class="w3-button w3-padding-large w3-border" href="/administracion/reserva" style="background-color: #DAA520;"><b> C O M P R A R »</b></a>         <a type="button"class="w3-button w3-padding-large w3-border text-white" style="background-color: #23437E;" href="/administracion/emprendimientos/listado"><b> R E G R E S A R »</b></a></p>
+          
+        
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b> Calificacion  </b> <span class="w3-tag">5</span></span></p>
+        </div>
+        <!--inicio de prueba de productos -->
+        <div>
+          {% for prod in productos %}
+          <h1>hola</h1>
+          <div class="w3-panel w3-card-4 w3" style="background-color: #FAFAEA ;">
+          <center><img src="/media/{{ emprende.fotoemp }}" alt="Nature"style="width:48%"></center>
+          <div class="w3-container">
+          <h5>{{ prod.descripcion }} <span class="w3-opacity"></span></h5>
+          </div>
+          
+          <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b> Calificacion  </b> <span class="w3-tag">5</span></span></p>
+          </div>
+          {% endfor %}
+        </div>
+        <!--fin de prueba de productos-->
+      </div>
+    </div>
+  </div>
+  
+  <hr>
+
+  
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin  w3-white">
+    <div class="w3-container w3-padding" style="background-color: #DAA520;">
+      <h4><b>Localizacion</b></h4>
+    </div>
+    <p>{{emprende.altitud}}, {{emprende.latitud}}</p>
+    <p>{{emprende.direccion}}</p>
+    
+  </div><hr>
+  <!-- About Card -->
+  <div class="w3-card w3-margin  w3-white">
+    <div class="w3-container w3-padding" style="background-color: #DAA520;">
+      <h4><b>Telefonos</b></h4>
+    </div>
+    <p>{{emprende.celular}}</p>
+    <p>{{emprende.tel_fijo}}</p>
+  </div><hr>
+    <!-- About Card -->
+  <div class="w3-card w3-margin  w3-white">
+    <div class="w3-container w3-padding" style="background-color: #DAA520;">
+      <h4><b>Horarios</b></h4>
+    </div>
+    <p>{{emprende.hora_apertura}}</p>
+    <p>{{emprende.hora_cierre}}</p>
+  </div>
+  <hr>
+  
+  <!-- Posts -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding" style="background-color: #DAA520;">
+      <h4><b>Redes Sociales</b></h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/facebook-line-icon.png" alt="Image" class="w3-left w3-margin-right" style="width:40px">
+        <span class="w3-large">Facebook</span><br>
+        <span>{{ emprende.face}}</span>
+      </li>
+      <li class="w3-padding-14">
+        <img src="https://www.iconpacks.net/icons/1/free-twitter-icon-99-thumb.png" alt="Image" class="w3-left w3-margin-right" style="width:40px">
+        <span class="w3-large">Twitter</span><br>
+        <span>{{ emprende.titter }}</span>
+      </li> 
+      <li class="w3-padding-14">
+        <img src="https://www.svgrepo.com/show/365495/instagram-logo-thin.svg" alt="Image" class="w3-left w3-margin-right" style="width:40px">
+        <span class="w3-large">Instagram</span><br>
+        <span>{{ emprende.instagram }}</span>
+      </li>   
+    </ul>
+  </div>
+  <hr> 
+ 
+  
+<!-- END Introduction Menu -->
+</div>
+
+</div>
+
+    
+</div>
+</html>
+
+{% endfor %}
+{% endblock%}
